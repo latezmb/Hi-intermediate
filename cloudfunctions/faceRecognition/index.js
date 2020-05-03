@@ -39,7 +39,7 @@ cloud.init()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-
+  console.log(config.SecretId + config.SecretKey)
     //获取fileID
     let fileID = event.fileID
     let imgUrl = getImageUrl(fileID)
@@ -100,41 +100,4 @@ const detectFace = (Url) => {
         })
       })
     });
-}
-
-//SDK
-const sdk = (imgUrl) => {
-    
-
-    // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-/*     let cred = new Credential("AKIDoQmiOugfAzZtxkOyhDSGn27VeWAYjPvB", "fwxjHcfRzmFRM3XkX4rUv4ye4D6Byart");
-
-    // 实例化一个http选项，可选的，没有特殊需求可以跳过。
-    let httpProfile = new HttpProfile();
-    httpProfile.reqMethod = "POST";
-    httpProfile.reqTimeout = 30;
-    httpProfile.endpoint = "iai.tencentcloudapi.com";
-
-    // 实例化一个client选项，可选的，没有特殊需求可以跳过。
-    let clientProfile = new ClientProfile();
-    clientProfile.signMethod = "HmacSHA256";
-    clientProfile.httpProfile = httpProfile;
-
-    // 实例化要请求产品(以cvm为例)的client对象。clientProfile可选。
-    let client = new CvmClient(cred, "", clientProfile); */
-
-    let req = new models.DetectFaceRequest()
-    req.Url = imgUrl
-
-    client.DetectFace(req, function(err, response){
-        // 请求异常返回，打印异常信息
-        if (err) {
-            console.log(err);
-            return err;
-        }
-        // 请求正常返回，打印response对象
-        console.log(response.to_json_string());
-        return "holle"
-        return response.to_json_string()
-    })
 }
