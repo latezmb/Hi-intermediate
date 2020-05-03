@@ -124,7 +124,7 @@ Page({
                             })
                             //console.log(res)
                             var temp = []
-                            temp.push(res.result)
+                            temp.push(res.result + "?imageMogr2/scrop/600x600")
                             for (var i in ImgInfo.FaceInfos) {
                                 temp.push(res.result+ "?imageMogr2/cut/" + ImgInfo.FaceInfos[i].Width + "x" + ImgInfo.FaceInfos[i].Height + "x" + ImgInfo.FaceInfos[i].X + "x" + ImgInfo.FaceInfos[i].Y)
                             }
