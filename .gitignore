@@ -1,3 +1,4 @@
 /cloudfunctions/CJimage/node_modules/
 /cloudfunctions/trialImage/node_modules/
 /cloudfunctions/faceRecognition/node_modules/
+/cloudfunctions/faceRecognition/config.js

@@ -4,6 +4,8 @@ const got = require('got');
 const extCi = require("@cloudbase/extension-ci");
 const tcb = require("tcb-admin-node");
 const tencentcloud = require("tencentcloud-sdk-nodejs")
+const config = require("./config")
+
 // 导入对应产品模块的client models。
 const CvmClient = tencentcloud.iai.v20180301.Client
 const models = tencentcloud.iai.v20180301.Models
@@ -12,7 +14,7 @@ const Credential = tencentcloud.common.Credential;//验证对象类
 const ClientProfile = tencentcloud.common.ClientProfile;//client选项
 const HttpProfile = tencentcloud.common.HttpProfile;//http选项
 // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-let cred = new Credential("AKIDoQmiOugfAzZtxkOyhDSGn27VeWAYjPvB", "fwxjHcfRzmFRM3XkX4rUv4ye4D6Byart");
+let cred = new Credential(config.SecretId, config.SecretKey);
 
 // 实例化一个http选项，可选的，没有特殊需求可以跳过。
 let httpProfile = new HttpProfile();
