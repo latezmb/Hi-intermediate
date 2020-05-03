@@ -1,0 +1,14 @@
+{
+    "pages": [
+        "pages/index"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#969BA2",
+        "navigationBarTitleText": "人脸识别",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

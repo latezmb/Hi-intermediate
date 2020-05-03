@@ -1,0 +1,13 @@
+<view class="{{page}}">
+    <canvas class="selectImg" bindtap="selectImg" canvas-id="myCanvas"></canvas>
+    <view class="toast">{{toast}}</view>
+    <view class="resultImg" >
+        <view wx:for="{{imgList}}" wx:key="this" bindtap="test" data-id="{{index}}">
+            <image class="{{select[index] == index ? 'border-select' : 'border-green'}}" src="{{item}}" mode="aspectFit" ></image>
+        </view>
+    </view>
+    <view class="upload" bindtap="uploadImg">
+        <image src="/images/cloud_upload.png"></image>
+        <text>上传</text>
+    </view>
+</view>
