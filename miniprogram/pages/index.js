@@ -3,7 +3,7 @@ let ImgInfo = []
 //图片fileID
 let fileID = ""
 //showImgInfo的点击判断
-let num = -1
+let num = 0
 //云储存图片路劲
 let cloudPath = ""
 const ctx = wx.createCanvasContext("myCanvas")
@@ -201,15 +201,22 @@ Page({
             this.paintingImg()
             this.showImgInfo(id)
             num = id
-            this.setData({
-                toast: "点击红色人脸框，可隐藏人脸魅力值"
-            })
+            if (id == 0){
+                this.setData({
+                    toast: "点击人脸框，可以显示人脸魅力值"
+                })
+            }else {
+                this.setData({
+                    toast: "点击红色人脸框，可隐藏人脸魅力值"
+                })
+            }
+           
         }else {
             //先清空，再画回来
             this.clearCanvas()
             this.paintingImg()
             this.showImgInfo(0)
-            num = -1
+            num = 0
             this.setData({
                 toast: "点击人脸框，可以显示人脸魅力值"
             })
