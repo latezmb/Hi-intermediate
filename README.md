@@ -1,12 +1,21 @@
-# 云开发 quickstart
+# 智能人脸魅力值识别
+**文件目录**
+1. cloudfunctions        //云函数目录
+	* CJimage	//智能截取图片云函数
+	* faceRecognition	//五官分析云函数
+	* trialImage	//图片安全审查云函数
+2. miniprogram	//小程序文件
+	* images	//图片
+	* pages		//小程序页面
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+## 小程序初始页面例图
+![初始页面](https://github.com/latezmb/public/blob/master/intermediate/1.jpg)
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+## 添加图片例图
+![添加图片](https://github.com/latezmb/public/blob/master/intermediate/2.jpg)
 
-## 参考文档
+## 上传审查通过，并获得五官信息
+![处理完成](https://github.com/latezmb/public/blob/master/intermediate/3.jpg)
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-
+## 效果展示
+![效果](https://github.com/latezmb/public/blob/master/intermediate/4.jpg)
